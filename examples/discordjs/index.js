@@ -12,7 +12,6 @@ class BotClient extends Discord.Client {
 
 const client = new BotClient({
 	intents: ["GUILDS", "GUILD_MESSAGES"],
-	token: "",
 });
 
 client.on("ready", function () {
