@@ -8,8 +8,8 @@ module.exports = {
 	 * @param {Message} message
 	 */
 	async execute(message, args) {
-		await message.channel.send(
-			`Pong - Round trip took \`${Math.round(message.client.ws.ping)}ms\``
-		);
+		await message.channel.send({
+		content: `Pong - Round trip took \`${Math.round(message.client.ws.ping)}ms\``	
+		});
 	},
 };
