@@ -7,7 +7,7 @@ const ghpages = require("gh-pages");
 ghpages.publish(
 	"./book/book/html",
 	{
-		branch: "js-book",
+		branch: "web1",
 		repo: "https://github.com/ThatGuyJamal/js-book.git",
 		message: "book update",
 	},
