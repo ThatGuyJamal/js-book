@@ -2,10 +2,11 @@
   "name": "js-book",
   "version": "1.0.0",
   "description": "A book for learning JavaScript",
-  "type":"commonjs",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,json,md}'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/ThatGuyJamal/js-book#readme",
   "dependencies": {
     "ghpages": "^0.0.10"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
   }
 }
