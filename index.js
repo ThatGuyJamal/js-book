@@ -2,6 +2,20 @@
  * This is just a helper file to run the publish script.
  */
 
-import { publishBook } from "./scripts/publish-book";
+const ghpages = require("gh-pages");
 
-publishBook()
+ghpages.publish(
+	"./book/book/html",
+	{
+		branch: "js-book",
+		repo: "https://github.com/ThatGuyJamal/js-book.git",
+		message: "book update",
+	},
+	function (err) {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log("book published to https://thatguyjamal.github.io/js-book");
+		}
+	}
+);
