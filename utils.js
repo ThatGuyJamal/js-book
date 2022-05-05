@@ -1,18 +1,8 @@
-const { Message } = require("discord.js");
+const { prefix } = require("./config.json");
 const fs = require("fs");
-const config = require("./config.json");
-
-const prefix = config.prefix;
 
 module.exports = {
-	/**
-	 * A helpful function to check for things before running our message command.
-	 * @param {Message} message The message object.
-	 * @param {BotClient} client The client object.
-	 * @returns {void} Nothing.
-	 */
 	processMessageCommands(message, client) {
-		// If all of the following are false, then the command was not ran!
 		if (
 			!message.content.startsWith(prefix) ||
 			message.author.bot ||
@@ -24,7 +14,7 @@ module.exports = {
 
 		const command = args.shift().toLowerCase(); // get the command from the message
 
-		if (!client.commands.has(command)) return; // if the command is not found, return
+		if (!client.commands.has(command)) return; // if the command doesn't exist, return
 
 		try {
 			client.commands.get(command).execute(message, args); // run the command and pass the message and arguments
@@ -35,10 +25,6 @@ module.exports = {
 
 		return;
 	},
-	/**
-	 *Loads all of the commands from the commands folder.
-	 * @param {BotClient} client The client object.
-	 */
 	loadCommands(client) {
 		const commandFiles = fs
 			.readdirSync("./commands")

@@ -1,8 +1,8 @@
 {
-  "name": "js-book",
+  "name": "js-mini-course",
   "version": "1.0.0",
-  "description": "A book for learning JavaScript",
-  "type":"commonjs",
+  "description": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/ThatGuyJamal/js-book#readme",
   "dependencies": {
-    "ghpages": "^0.0.10"
+    "discord.js": "^13.6.0"
   }
 }

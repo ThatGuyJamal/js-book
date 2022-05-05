@@ -1,21 +1,25 @@
-/**
- * This is just a helper file to run the publish script.
- */
+const Discord = require('discord.js');
+const config = require('./config.json');
+const utils = require('./utils');
 
-const ghpages = require("gh-pages");
+class BotClient extends Discord.Client {
+    constructor(options) {
+        super(options)
+        this.commands = new Discord.Collection();
+    }
+}
 
-ghpages.publish(
-	"./book/book/html",
-	{
-		branch: "web1",
-		repo: "https://github.com/ThatGuyJamal/js-book.git",
-		message: "book update",
-	},
-	function (err) {
-		if (err) {
-			console.log(err);
-		} else {
-			console.log("book published to https://thatguyjamal.github.io/js-book");
-		}
-	}
-);
+const client = new BotClient({
+    intents: ["GUILDS", "GUILD_MESSAGES"]
+})
+
+client.on("ready", () => {
+    utils.loadCommands(client);
+    console.log("Bot is ready!")
+})
+
+client.on("message", async (message) => {
+    utils.processMessageCommands(message, client);
+})
+
+client.login(config.token)
