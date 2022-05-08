@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Welcome</a></li><li class="chapter-item expanded "><a href="1/index.html"><strong aria-hidden="true">1.</strong> The Basics</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="1/index.html"><strong aria-hidden="true">1.</strong> The Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1/pages/declaration.html"><strong aria-hidden="true">1.1.</strong> Declaration</a></li><li class="chapter-item expanded "><a href="1/pages/functions.html"><strong aria-hidden="true">1.2.</strong> Functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> Data Types</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.4.</strong> Variables</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.5.</strong> Conditions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.6.</strong> Loops</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.7.</strong> Arrays</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.8.</strong> Objects</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.9.</strong> Events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.10.</strong> Math</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.11.</strong> Classes</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.11.1.</strong> Inheritance</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.12.</strong> Modules</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.13.</strong> Bitwise</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.14.</strong> Debugging</div></li></ol></li><li class="chapter-item expanded "><li class="part-title">TypeScript</li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> The Basics</div></li><li class="chapter-item expanded affix "><li class="part-title">RuneTimes</li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Nodejs</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> package.json</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> npm</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Deno</div></li><li class="chapter-item expanded affix "><li class="part-title">DOM</li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -117,7 +117,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/ThatGuyJamal/js-mini-course" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/ThatGuyJamal/js-book" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
@@ -166,22 +166,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
