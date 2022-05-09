@@ -1,7 +1,7 @@
 # The Basics
 
-Alright, let's just right in with the basics of JavaScript. I will leave setting up your programming environment to you as
-this book is meant to be un-opinionated. However, if you are 100% new, you can use a website called [Programiz](https://www.programiz.com/javascript/online-compiler/) to get started and follow along.
+Alright, let's jump right in with the basics of JavaScript. I will leave configuring your programming environment to you as
+this book is meant to be un-opinionated. However, if you are unsure how to start, you can use a website called [Programiz](https://www.programiz.com/javascript/online-compiler/) to get started and follow along without any setup.
 
 ## Variables
 
